@@ -5,6 +5,8 @@ class Program
 {
     static void Main(string[] args)
     {
+        int correctAnswersCounter = 0;
+        int wrongAnswersCounter = 0;
         var quizQuestions = QuizReader.ReadQuizFromXml(args[0]);
         foreach (var question in quizQuestions)
         {
@@ -18,12 +20,16 @@ class Program
             if (answerIndex == question.CorrectAnswerIndex)
             {
                 Console.WriteLine("Правильно!");
+                correctAnswersCounter++;
             }
             else
             {
                 Console.WriteLine("Неправильно!");
+                wrongAnswersCounter++;
             }
             Console.WriteLine();
         }
+        Console.WriteLine($"Правильных ответов: {correctAnswersCounter}");
+        Console.WriteLine($"Неправильных ответов: {wrongAnswersCounter}");
     }
 }
