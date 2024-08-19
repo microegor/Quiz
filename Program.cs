@@ -1,49 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Xml.Linq;
 
-class QuizQuestion
-{
-    public string Question { get; set; }
-    public List<string> Answers { get; set; }
-    public int CorrectAnswerIndex { get; set; }
-}
-
-class QuizReader
-{
-    public static List<QuizQuestion> ReadQuizFromXml(string filePath)
-    {
-        var quizQuestions = new List<QuizQuestion>();
-        var doc = XDocument.Load(filePath);
-
-        foreach (var questionElement in doc.Descendants("Question"))
-        {
-            var questionText = questionElement.Element("Text").Value;
-            var answers = new List<string>();
-            int correctAnswerIndex = -1;
-
-            foreach (var answerElement in questionElement.Descendants("Answer"))
-            {
-                answers.Add(answerElement.Value);
-                if (answerElement.Attribute("correct") != null && answerElement.Attribute("correct").Value == "true")
-                {
-                    correctAnswerIndex = answers.Count - 1;
-                }
-            }
-
-            quizQuestions.Add(new QuizQuestion
-            {
-                Question = questionText,
-                Answers = answers,
-                CorrectAnswerIndex = correctAnswerIndex
-            });
-        }
-
-        return quizQuestions;
-    }
-}
-
-// Example usage
 class Program
 {
     static void Main(string[] args)
