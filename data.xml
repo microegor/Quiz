@@ -1,0 +1,47 @@
+<Quiz>
+  <Question>
+    <Text>Сколько пальцев на руке?</Text>
+    <Answers>
+      <Answer>4</Answer>
+      <Answer correct="true">5</Answer>
+      <Answer>3</Answer>
+      <Answer>10</Answer>
+    </Answers>
+  </Question>
+  <Question>
+    <Text>Какой город является столицей России?</Text>
+    <Answers>
+      <Answer correct="true">Москва</Answer>
+      <Answer>Санкт-Петербург</Answer>
+      <Answer>Казань</Answer>
+      <Answer>Париж</Answer>
+    </Answers>
+  </Question>
+  <Question>
+    <Text>Какой язык программирования самый популярный?</Text>
+    <Answers>
+      <Answer correct="true">Python</Answer>
+      <Answer>Java</Answer>
+      <Answer>C++</Answer>
+      <Answer>JavaScript</Answer>
+    </Answers>
+  </Question>
+  <Question>
+    <Text>Сколько будет 2 + 2 * 2?</Text>
+    <Answers>
+      <Answer correct="true">6</Answer>
+      <Answer>8</Answer>
+      <Answer>4</Answer>
+      <Answer>2</Answer>
+    </Answers>
+  </Question>
+  <Question>
+    <Text>Какой год начала Великой Отечественной войны?</Text>
+    <Answers>
+      <Answer>1939</Answer>
+      <Answer correct="true">1941</Answer>
+      <Answer>1945</Answer>
+      <Answer>1943</Answer>
+    </Answers>
+  </Question>
+</Quiz>
